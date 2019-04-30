@@ -1,0 +1,196 @@
+
+D57-01+Alumnos@D57-01 ~
+$ clear}
+
+D57-01+Alumnos@D57-01 ~
+$ spin assert3.pml
+spin: assert3.pml:11, Error: assertion violated
+spin: text of failed assertion: assert(( ((a>=b)) -> ((max==a)) : ((max==b)) ))
+#processes: 1
+  4:    proc  0 (P:1) assert3.pml:11 (state 7)
+1 process created
+
+D57-01+Alumnos@D57-01 ~
+$ spin assert3.pml
+spin: assert3.pml:11, Error: assertion violated
+spin: text of failed assertion: assert(( ((a>=b)) -> ((max==a)) : ((max==b)) ))
+#processes: 1
+  4:    proc  0 (P:1) assert3.pml:11 (state 7)
+1 process created
+
+D57-01+Alumnos@D57-01 ~
+$ spin assert3.pml
+1 process created
+
+D57-01+Alumnos@D57-01 ~
+$ spin assert3.pml
+1 process created
+
+D57-01+Alumnos@D57-01 ~
+$ spin -a assert3.pml
+
+D57-01+Alumnos@D57-01 ~
+$ ll pan*
+-bash: ll: command not found
+
+D57-01+Alumnos@D57-01 ~
+$ ls *pan
+ls: cannot access '*pan': No such file or directory
+
+D57-01+Alumnos@D57-01 ~
+$ ls
+asser1.pml   assert3.pml  critical.pml  mayor.pml  pan.c  pan.m  pan.t
+assert2.pml  cont.pml     hello.pml     pan.b      pan.h  pan.p
+
+D57-01+Alumnos@D57-01 ~
+$ gcc pan.c
+
+D57-01+Alumnos@D57-01 ~
+$ ./a.out
+-bash: ./a.out: No such file or directory
+
+D57-01+Alumnos@D57-01 ~
+$ a.out
+-bash: a.out: command not found
+
+D57-01+Alumnos@D57-01 ~
+$ ./pan.exe
+-bash: ./pan.exe: No such file or directory
+
+D57-01+Alumnos@D57-01 ~
+$ ./a.exe
+spin: error, the version of spin that generated this pan.c assumed a different wordsize (4 iso 8)
+
+D57-01+Alumnos@D57-01 ~
+
+
+
+
+
+
+D57-01+Alumnos@D57-01 ~
+$ ./pan.exe
+pan:1: assertion violated ( ((a>=b)) ? ((max==a)) : ((max==b)) ) (at depth 0)
+pan: wrote assert3.pml.trail
+
+(Spin Version 6.4.9 -- 17 December 2018)
+Warning: Search not completed
+        + Partial Order Reduction
+
+Full statespace search for:
+        never claim             - (none specified)
+        assertion violations    +
+        acceptance   cycles     - (not selected)
+        invalid end states      +
+
+State-vector 16 byte, depth reached 2, errors: 1
+        3 states, stored
+        0 states, matched
+        3 transitions (= stored+matched)
+        0 atomic steps
+hash conflicts:         0 (resolved)
+
+Stats on memory usage (in Megabytes):
+    0.000       equivalent memory usage for states (stored*(State-vector + overhead))
+    0.292       actual memory usage for states
+  128.000       memory used for hash table (-w24)
+    0.534       memory used for DFS stack (-m10000)
+  128.730       total actual memory usage
+
+
+
+pan: elapsed time 0.001 seconds
+
+D57-01+Alumnos@D57-01 ~
+$ spin  -i assert3.pml
+Select stmnt (proc  0 (P:1) )
+        choice 1: ((a>=b))
+        choice 2: ((b>=a))
+Select [0-2]: 1
+1 process created
+
+D57-01+Alumnos@D57-01 ~
+$ spin  -i assert3.pml
+Select stmnt (proc  0 (P:1) )
+        choice 1: ((a>=b))
+        choice 2: ((b>=a))
+Select [0-2]: 2
+spin: assert3.pml:11, Error: assertion violated
+spin: text of failed assertion: assert(( ((a>=b)) -> ((max==a)) : ((max==b)) ))
+#processes: 1
+  4:    proc  0 (P:1) assert3.pml:11 (state 7)
+1 process created
+
+D57-01+Alumnos@D57-01 ~
+$ spin  -i assert3.pml
+Select stmnt (proc  0 (P:1) )
+        choice 1: ((a>=b))
+        choice 2: ((b>=a))
+Select [0-2]: 2
+spin: assert3.pml:11, Error: assertion violated
+spin: text of failed assertion: assert(( ((a>=b)) -> ((max==a)) : ((max==b)) ))
+#processes: 1
+  4:    proc  0 (P:1) assert3.pml:11 (state 7)
+1 process created
+
+D57-01+Alumnos@D57-01 ~
+$ spin  -i assert3.pml
+Select stmnt (proc  0 (P:1) )
+        choice 1: ((a>=b))
+        choice 2: ((b>=a))
+Select [0-2]: 2
+spin: assert3.pml:11, Error: assertion violated
+spin: text of failed assertion: assert(( ((a>=b)) -> ((max==a)) : ((max==b)) ))
+#processes: 1
+  4:    proc  0 (P:1) assert3.pml:11 (state 7)
+1 process created
+
+D57-01+Alumnos@D57-01 ~
+$ spin  -i assert3.pml
+Select stmnt (proc  0 (P:1) )
+        choice 1: ((a>=b))
+        choice 2: ((b>=a))
+Select [0-2]: 2
+spin: assert3.pml:11, Error: assertion violated
+spin: text of failed assertion: assert(( ((a>=b)) -> ((max==a)) : ((max==b)) ))
+#processes: 1
+  4:    proc  0 (P:1) assert3.pml:11 (state 7)
+1 process created
+
+D57-01+Alumnos@D57-01 ~
+$ spin  -i assert3.pml
+Select stmnt (proc  0 (P:1) )
+        choice 1: ((a>=b))
+        choice 2: ((b>=a))
+Select [0-2]: 2
+        choice outside range
+      timeout
+Select stmnt (proc  0 (P:1) )
+        choice 1: ((a>=b))
+        choice 2: ((b>=a))
+Select [0-2]: 2
+spin: assert3.pml:11, Error: assertion violated
+spin: text of failed assertion: assert(( ((a>=b)) -> ((max==a)) : ((max==b)) ))
+#processes: 1
+  4:    proc  0 (P:1) assert3.pml:11 (state 7)
+1 process created
+
+D57-01+Alumnos@D57-01 ~
+$ spin  -i assert3.pml
+Select stmnt (proc  0 (P:1) )
+        choice 1: ((a>=b))
+        choice 2: ((b>=a))
+Select [0-2]: 1
+1 process created
+
+D57-01+Alumnos@D57-01 ~
+$ spin  -i assert3.pml
+Select stmnt (proc  0 (P:1) )
+        choice 1: ((a>=b))
+        choice 2: ((b>=a))
+Select [0-2]: 1
+1 process created
+
+D57-01+Alumnos@D57-01 ~
+$
+
