@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	con, _ := net.Dial("tcp", "10.11.98.229:8000")
+	con, _ := net.Dial("tcp", "10.11.98.200:8000")
 	defer con.Close()
 	r := bufio.NewReader(con)
 	gin := bufio.NewReader(os.Stdin)
